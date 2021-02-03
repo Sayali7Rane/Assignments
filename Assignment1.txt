@@ -1,0 +1,849 @@
+1)
+import java.util.Scanner;
+
+public class PrimeNumber {
+
+	public static void main(String[] args) {
+		int temp;
+		boolean isPrime=true;
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter any number:");
+		int num=sc.nextInt();
+	       
+		for(int i=2;i<=num/2;i++)
+		{
+	           temp=num%i;
+		   if(temp==0)
+		   {
+		      isPrime=false;
+		      break;
+		   }
+		}
+		if(isPrime)
+		   System.out.println(num + " is a Prime Number");
+		else
+		   System.out.println(num + " is not a Prime Number");
+
+	}
+
+}
+
+2)
+import java.util.Scanner;
+
+public class PositiveNegative {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		int num;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number :");
+        num = sc.nextInt();
+        if(num > 0)
+        {
+            System.out.println(num+" is Positive number");
+        }
+        else if(num < 0)
+        {
+            System.out.println(num+" is Negative number");
+        }
+        else
+        {
+            System.out.println(num+" is neither positive nor negative");
+        }
+
+	}
+
+}
+
+3)
+import java.util.Scanner;
+
+public class Factorial {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i,fact=1,num ;  
+		  System.out.println("enter number to find factorial:"); 
+		  Scanner sc = new Scanner(System.in);
+		  num=sc.nextInt();
+		  for(i=1;i<=num;i++){    
+		      fact=fact*i;    
+		  }    
+		  System.out.println("Factorial of "+num+" is: "+fact);    	
+
+	}
+
+}
+
+4)
+import java.util.Scanner;
+
+public class Fibonacci {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		int count , num1 = 0, num2 = 1;
+		System.out.println("Enter count to display fibonacci series:");
+		Scanner sc =new Scanner(System.in);
+		count =sc.nextInt();
+        System.out.print("Fibonacci Series of "+count+" numbers:");
+
+        for (int i = 1; i <= count; ++i)
+        {
+            System.out.print(num1+" ");
+
+          
+            int sumOfPrevTwo = num1 + num2;
+            num1 = num2;
+            num2 = sumOfPrevTwo;
+        }
+   
+
+	}
+
+}
+5)
+
+public class FiboInsteadOfTerms {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+        
+        int n = 20, term1 = 0, term2 = 1;
+        
+        System.out.print("Upto " + n +  ": ");
+        while (term1 <= n)
+        {
+            System.out.print(term1 + " + ");
+
+            int sum = term1 + term2;
+            term1 = term2;
+            term2 = sum;
+	
+	}
+
+}
+}
+
+6)
+public class UpperCase {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+        char c;
+
+        for(c = 'A'; c <= 'Z'; c++)
+            System.out.print(c + " ");
+ 
+
+	}
+
+}
+
+7)
+
+public class SwapTempVariable {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int f1= 22, f2 = 33;
+
+        System.out.println("Before swap:");
+        System.out.println("First number = " + f1);
+        System.out.println("Second number = " + f2);
+        int temp = f1;
+        f1 = f2;
+        f2 = temp;
+
+        System.out.println("After swap:");
+        System.out.println("First number = " + f1);
+        System.out.println("Second number = " + f2);
+   
+
+	}
+
+}
+8)
+
+public class SwapWithoutTempVariable {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int f1 = 22,f2 = 33;
+
+        System.out.println("Before swap:");
+        System.out.println("First number = " + f1);
+        System.out.println("Second number = " + f2);
+
+        f1 = f1 - f2;
+        f2 = f1 + f2;
+        f1=  f2 - f1;
+
+        System.out.println("After swap:");
+        System.out.println("First number = " + f1);
+        System.out.println("Second number = " + f2);
+   
+
+	}
+
+}
+9)
+import java.util.Scanner;
+
+public class VowelConsonent {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	
+      
+		System.out.println("enter character to  check vowel or consonent: ");
+		Scanner sc =new Scanner(System.in);
+		 char ch = sc.next().charAt(0); 
+
+
+        if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' )
+            System.out.println(ch + " is vowel");
+        else
+            System.out.println(ch + " is consonant");
+	
+		
+   
+	}
+
+}
+10)
+import java.util.Scanner;
+
+public class Largest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int n, largest;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number of elements:");
+        n = sc.nextInt();
+        int a[] = new int[n];
+        System.out.println("Enter elements :");
+        for(int i = 0; i < n; i++)
+        {
+            a[i] = sc.nextInt();
+        }
+        largest = a[0];
+        for(int i = 0; i < n; i++)
+        {
+            if(largest< a[i])
+            {
+                largest = a[i];
+            }
+        }
+        System.out.println("largest number is :"+largest);
+   
+
+	}
+
+}
+11)
+import java.util.Scanner;
+
+public class ReverseNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	      int num=0;
+	      int revnum =0;
+	      System.out.println("enter number: ");
+	      Scanner sc = new Scanner(System.in);
+	      num = sc.nextInt();
+	      for( ;num != 0; )
+	      {
+	          revnum = revnum * 10;
+	          revnum = revnum + num%10;
+	          num = num/10;
+	      }
+	      System.out.println("Reverse of number is: "+revnum);
+	   
+
+	}
+
+}
+12)
+import java.util.Scanner;
+
+public class Palindrome {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 int r,sum=0,temp,n;  
+		 System.out.println("enter number:");
+		 Scanner sc = new Scanner(System.in);
+		 n=sc.nextInt();
+		 temp=n;    
+		  while(n>0){    
+		   r=n%10;    
+		   sum=(sum*10)+r;    
+		   n=n/10;    
+		  }    
+		  if(temp==sum)    
+		   System.out.println(" palindrome number ");    
+		  else    
+		   System.out.println("  not palindrome");    
+
+	}
+
+}
+13)
+import java.util.Scanner;
+
+public class Prime {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i,m=0,flag=0;      
+		  int n;
+		  System.out.println("Enter number :");
+		  Scanner sc =new Scanner(System.in);
+		  n=sc.nextInt();
+		  m=n/2;      
+		  if(n==0||n==1){  
+		   System.out.println(n+" is not prime number.");      
+		  }else{  
+		   for(i=2;i<=m;i++){      
+		    if(n%i==0){      
+		     System.out.println(n+" is not prime number.");      
+		     flag=1;      
+		     break;      
+		    }      
+		   }      
+		   if(flag==0)  { System.out.println(n+" is prime number"); }  
+		  } 
+
+
+	}
+
+}
+14)
+
+public class IntervalNumbers {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int low = 10, high = 20;
+
+        while (low < high) {
+            boolean flag = false;
+
+            for(int i = 2; i <= low/2; ++i) {
+               
+                if(low % i == 0) {
+                    flag = true;
+                    break;
+                }
+            }
+
+            if (!flag && low != 0 && low != 1)
+                System.out.print(low + " ");
+
+            ++low;
+        }
+
+	}
+
+}
+15)
+
+import java.util.Scanner;
+
+public class Armstrong {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int  originalnum, num,remainder, result = 0;
+
+		System.out.println("enter number :");
+		Scanner sc =new Scanner(System.in);
+		num=sc.nextInt();
+		
+
+        originalnum = num;
+
+        while (originalnum != 0)
+        {
+            remainder = originalnum % 10;
+            result += Math.pow(remainder, 3);
+            originalnum /= 10;
+        }
+
+        if(result == num)
+            System.out.println(num + " is an Armstrong number.");
+        else
+            System.out.println(num + " is not an Armstrong number.");
+    
+
+	}
+
+}
+16)
+
+public class ArmstrongNdigit {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i=1,a,arm,n,temp;
+		System.out.println("Armstrong numbers between 1 to 200 are");
+		while(i<200)
+		{
+		n=i;
+		arm=0;
+		while(n>0)
+		{
+			a=n%10;
+			arm=arm+(a*a*a);
+			n=n/10;
+		}
+		if(arm==i)
+			System.out.println(i);
+		i++;
+		}
+
+	}
+
+}
+17)
+
+public class ArmstrongBetweenInteger {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i=100,arm;
+		System.out.println("Armstrong numbers between 100 to 999");
+		while(i<1000)
+		{
+		arm=armstrongOrNot(i);
+		if(arm==i)
+		System.out.println(i);
+		i++;
+		}
+		}
+	    static int armstrongOrNot(int num)
+	    {
+		int x,a=0;
+		while(num!=0)
+		{
+			x=num%10;
+			a=a+(x*x*x);
+			num/=10 ;
+		}
+		return a;
+
+
+	}
+
+}
+18)
+
+public class PrimeNumbers {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int low = 5, high = 10;
+
+        while (low < high) {
+            boolean flag = false;
+
+            for(int i = 2; i <= low/2; ++i) {
+               
+                if(low % i == 0) {
+                    flag = true;
+                    break;
+                }
+            }
+
+            if (!flag && low != 0 && low != 1)
+                System.out.print(low + " ");
+
+            ++low;
+        }
+
+	}
+
+}
+19)
+import java.util.Scanner;
+
+public class SumOfPrime {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter a number: ");
+		int number = sc.nextInt();
+		boolean flag = false;
+		for (int i = 2; i <= number / 2; ++i) {
+
+		if (sum_of_primes(i)) {
+
+		if (sum_of_primes(number - i)) {
+
+		System.out.printf("%d can be expressed as the sum of %d and %d\n", number, i, number - i);
+		flag = true;
+		}
+
+		}
+		}
+
+		if (!flag)
+		System.out.println(number + " cannot be expressed as the sum of two prime numbers.");
+	}
+		static boolean sum_of_primes(int num) {
+		boolean isPrime = true;
+
+		for (int i = 2; i <= num / 2; ++i) {
+		if (num % i == 0) {
+		isPrime = false;
+		break;
+		}
+		}
+
+		return isPrime;
+
+
+	}
+
+}
+20)
+import java.util.Scanner;
+
+public class DecimalToOctal {
+	static int i=1;
+    
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        int dec, rem, q,j=1;
+        Scanner sc = new Scanner(System.in);   
+        System.out.println("Enter a Decimal number: ");
+        dec=sc.nextInt();
+        System.out.println("Octal number is : ");
+        int[] oct=octal(dec); 
+        for(int c=i-1;c>0;c--)
+        {
+	     System.out.print(oct[c]);
+        }
+   
+    }
+    static int[] octal(int q)
+    {
+        int a[] = new int[50];
+        while(q != 0)
+        {
+            a[i++] = q%8;
+            q= q/8;
+        }
+        return a;
+
+
+	}
+
+}
+21)
+import java.util.Scanner;
+
+public class OctalToDecimal {
+	static int i=1;
+    
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        int oct, dec=0, i=0, t;
+        Scanner sc = new Scanner(System.in);		
+        System.out.println("Enter Octal Number : ");
+        oct = sc.nextInt();				
+        while(oct != 0)
+        {
+            dec =dec + (oct%10) *(int)Math.pow(8, i);
+            i++;
+            oct = oct/10;
+        }		
+        System.out.println("Decimal  Number is : "+dec);
+	}
+
+}
+22)
+import java.util.Scanner;
+
+public class BinaryToDecimal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		  Scanner sc=new Scanner(System.in);
+          
+          System.out.println("Enter a binary number:");
+
+          String n=sc.nextLine();
+          
+          System.out.println(Integer.parseInt(n,2));
+      
+
+	}
+
+}
+23)
+import java.util.Scanner;
+
+public class DecimalToBinary{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		   int n;
+		  Scanner sc=new Scanner(System.in);
+          
+          System.out.println("Enter a decimal number:");
+
+           n=sc.nextInt();
+          
+           System.out.println("Binary representation is: ");
+       	   System.out.println(Integer.toBinaryString(n));
+           
+      
+
+	}
+
+}
+24)
+import java.util.Scanner;
+
+public class FactUsingRecursion {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	      Scanner scanner = new Scanner(System.in);
+	      System.out.println("Enter the number:");
+	      int num = scanner.nextInt();
+	      int factorial = fact(num);
+	      System.out.println("Factorial of entered number is: "+factorial);
+	   }
+	   static int fact(int n)
+	   {
+	       int output;
+	       if(n==1){
+	         return 1;
+	       }
+	       //Recursion: Function calling itself!!
+	       output = fact(n-1)* n;
+	       return output;
+	  
+
+	}
+
+}
+25)
+import java.util.Scanner;
+
+public class DecimalToOctal {
+	static int i=1;
+    
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        int dec, rem, q,j=1;
+        Scanner sc = new Scanner(System.in);   
+        System.out.println("Enter a Decimal number: ");
+        dec=sc.nextInt();
+        System.out.println("Octal number is : ");
+        int[] oct=octal(dec); 
+        for(int c=i-1;c>0;c--)
+        {
+	     System.out.print(oct[c]);
+        }
+   
+    }
+    static int[] octal(int q)
+    {
+        int a[] = new int[50];
+        while(q != 0)
+        {
+            a[i++] = q%8;
+            q= q/8;
+        }
+        return a;
+
+
+	}
+
+}
+26)
+
+public class BinaryToOctal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        long binary = 101001;
+        int octal = convertBinarytoOctal(binary);
+        System.out.printf("%d in binary = %d in octal", binary, octal);
+    }
+
+    public static int convertBinarytoOctal(long binaryNumber)
+    {
+        int octalNumber = 0, decimalNumber = 0, i = 0;
+
+        while(binaryNumber != 0)
+        {
+            decimalNumber += (binaryNumber % 10) * Math.pow(2, i);
+            ++i;
+            binaryNumber /= 10;
+        }
+
+        i = 1;
+
+        while (decimalNumber != 0)
+        {
+            octalNumber += (decimalNumber % 8) * i;
+            decimalNumber /= 8;
+            i *= 10;
+        }
+
+        return octalNumber;
+   
+
+	}
+
+}
+27)
+
+public class OctalToBinary {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int octal = 67;
+        long binary = convertOctalToBinary(octal);
+        System.out.printf("%d in octal = %d in binary", octal, binary);
+     }
+
+     public static long convertOctalToBinary(int octalNumber)
+     {
+        int decimalNumber = 0, i = 0;
+        long binaryNumber = 0;
+
+        while(octalNumber != 0)
+        {
+            decimalNumber += (octalNumber % 10) * Math.pow(8, i);
+            ++i;
+            octalNumber/=10;
+        }
+
+        i = 1;
+
+        while (decimalNumber != 0)
+        {
+            binaryNumber += (decimalNumber % 2) * i;
+            decimalNumber /= 2;
+            i *= 10;
+        }
+
+        return binaryNumber;
+    
+
+	}
+
+}
+28)
+
+public class ReverseSentence {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String sentence = "CDAC Mumbai";
+	    String reversed = reverse(sentence);
+	    System.out.println("The reversed sentence is: " + reversed);
+	  }
+
+	  public static String reverse(String sentence) {
+	    if (sentence.isEmpty())
+	      return sentence;
+
+	    return reverse(sentence.substring(1)) + sentence.charAt(0);
+	  
+
+	}
+
+}
+29)
+
+public class PowerRecursion {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int base = 2, powerRaised = 3;
+        int result = power(base, powerRaised);
+
+        System.out.printf("%d^%d = %d", base, powerRaised, result);
+    }
+
+    public static int power(int base, int powerRaised) {
+        if (powerRaised != 0)
+            return (base * power(base, powerRaised - 1));
+        else
+            return 1;
+    
+	}
+
+}
+30)
+
+public class LargestEleArray {
+
+	static int arr[] = {89, 34 ,50, 23, 100, 39,455}; 
+    static int largest() 
+    { 
+        int i;  
+        int max = arr[0];   
+        for (i = 1; i < arr.length; i++) 
+            if (arr[i] > max) 
+                max = arr[i]; 
+       
+        return max; 
+    } 
+    public static void main(String[] args)  
+    { 
+        System.out.println("Largest in given array is " + largest()); 
+       } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
