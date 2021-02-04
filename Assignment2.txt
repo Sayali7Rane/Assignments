@@ -1,0 +1,171 @@
+1)
+
+public class MaxOccuranceOfString {
+
+		// TODO Auto-generated method stub
+		 static final int N = 256;
+		 static char MaxOccuringChar(String str) {
+		  int ctr[] = new int[N];
+		  int l = str.length();
+		  for (int i = 0; i < l; i++)
+		   ctr[str.charAt(i)]++;
+		  int max = -1;
+		  char result = ' ';
+
+		  for (int i = 0; i < l; i++) {
+		   if (max < ctr[str.charAt(i)]) {
+		    max = ctr[str.charAt(i)];
+		    result = str.charAt(i);
+		   }
+		  }
+
+		  return result;
+		 }
+		 public static void main(String[] args) {
+		  String str = "java ";
+		  System.out.println("The given string is: " + str);
+		  System.out.println("Max occurring character in the given string is: " + MaxOccuringChar(str));
+		 
+
+	}
+
+}
+2)
+import java.util.Arrays;
+
+public class RemoveDuplicate {
+
+
+		// TODO Auto-generated method stub
+	static void removeDuplicates(char[] S)  
+    { 
+        int n = S.length; 
+        if (n < 2)  
+        { 
+            return; 
+        } 
+   
+        int j = 0; 
+        for (int i = 1; i < n; i++)  
+        { 
+    
+            if (S[j] != S[i]) 
+            { 
+                j++; 
+                S[j] = S[i]; 
+            } 
+        } 
+        System.out.println(Arrays.copyOfRange(S, 0, j + 1)); 
+    } 
+  
+    public static void main(String[] args) 
+    { 
+        char S1[] ="javaaaaaaaaaaaaaaaaaa".toCharArray(); 
+        removeDuplicates(S1); 
+  
+      
+    } 
+	 }
+3)
+
+public class DuplicateCharacter {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	        String str1 = "java and javscript";  
+	        int count;  
+	        char string[] = str1.toCharArray();  
+	          
+	        System.out.println("Duplicate characters in a given string: ");  
+	        for(int i = 0; i <string.length; i++) {  
+	            count = 1;  
+	            for(int j = i+1; j <string.length; j++) {  
+	                if(string[i] == string[j] && string[i] != ' ') {  
+	                    count++;    
+	                    string[j] = '0';  
+	                }  
+	            }  
+	            if(count > 1 && string[i] != '0')  
+	                System.out.println(string[i]);  
+	        }  
+	    }  
+
+	}
+
+
+4)
+import java.util.Scanner;
+
+public class RemoveCharacterFirstString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	
+	        Scanner sc = new Scanner(System.in);
+	        String str,sbstr;
+	        
+	        System.out.println("Enter the first String : ");
+	        str = sc.nextLine();
+	        
+	        System.out.println("Enter the second String : ");
+	        sbstr = sc.nextLine();
+	        
+	        char [] c1str = str.toCharArray();
+	        char [] c2sbstr = sbstr.toCharArray();
+	       
+	        
+	            for(int j=0;j<c2sbstr.length;j++) {
+	                for(int i=0;i<c1str.length;i++) {
+
+	                if(c1str[i] == c2sbstr[j]) {
+	                    c1str[i] = 0;
+	                }    
+	            }
+	        }
+
+	        System.out.println("After removing the characters of second string from first string :");
+
+	        for(int i=0;i<c1str.length;i++) {
+	            System.out.print(c1str[i]); 
+	        }  
+	    
+
+
+	}
+
+}
+
+5)
+import java.util.Scanner;
+
+public class StringRotation1 {
+
+		// TODO Auto-generated method stub
+		public static void main(String[] args) { 
+	Scanner sc = new Scanner(System.in); 
+	System.out.println("Please enter String"); 
+	String input = sc.nextLine(); 
+	System.out.println("Please enter rotation of String"); 
+	String rotation = sc.nextLine(); 
+	if (checkRotatation(input, rotation)) { 
+		System.out.println(input + " and " + rotation + " are rotation of each other");
+		} else { System.out.println("Strings are not rotation of another");
+		} 
+
+	}
+		public static boolean checkRotatation(String original, String rotation) { 
+		if (original.length() != rotation.length()) { 
+			return false;
+			} String concatenated = original + original;
+		if (concatenated.indexOf(rotation) != -1) { 
+			return true;
+			} 
+		return false;
+		}
+	
+
+	}
+
+
+
